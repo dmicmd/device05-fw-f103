@@ -9,7 +9,10 @@ extern "C" {
 #define MATRIX_COLS 4
 
 void gpio_matrix_init(void);
-uint8_t gpio_matrix_read(uint8_t row, uint8_t col);
+void gpio_matrix_select_row(uint8_t row);
+uint8_t gpio_matrix_read_cols(void);
+
+uint8_t gpio_matrix_read_key(uint8_t row, uint8_t col);
 
 #ifdef __cplusplus
 }
