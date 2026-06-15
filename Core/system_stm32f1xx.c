@@ -23,4 +23,10 @@ void SystemInit(void)
     RCC->CFGR &= ~RCC_CFGR_SW;
     RCC->CFGR |= RCC_CFGR_SW_PLL;
     while ((RCC->CFGR & RCC_CFGR_SWS) != RCC_CFGR_SWS_PLL) {}
+
+    // Update system clock value (CMSIS)
+    SystemCoreClockUpdate();
+
+    // 1ms SysTick
+    SysTick_Config(SystemCoreClock / 1000U);
 }
