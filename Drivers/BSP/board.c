@@ -1,5 +1,5 @@
 #include "board.h"
-#include "stm32f10x.h"
+#include "stm32f103xb.h"
 
 #define LED_PIN (1U << 13)
 
