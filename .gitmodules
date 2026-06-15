@@ -1,0 +1,7 @@
+[submodule "libopencm3"]
+	path = external/libopencm3
+	url = https://github.com/libopencm3/libopencm3.git
+
+[submodule "cmsis"]
+	path = external/cmsis
+	url = https://github.com/ARM-software/CMSIS_5.git
